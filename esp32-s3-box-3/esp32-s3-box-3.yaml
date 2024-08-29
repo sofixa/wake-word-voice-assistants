@@ -254,18 +254,18 @@ voice_assistant:
     - text_sensor.template.publish:
         id: text_response
         state: !lambda return x;
-  on_tts_stream_start:
-    - lambda: id(voice_assistant_phase) = ${voice_assist_replying_phase_id};
-    - script.execute: draw_display
-  on_tts_stream_end:
-    - if:
-        condition:
-          switch.is_off: mute
-        then:
-          - lambda: id(voice_assistant_phase) = ${voice_assist_idle_phase_id};
-        else:
-          - lambda: id(voice_assistant_phase) = ${voice_assist_muted_phase_id};
-    - script.execute: draw_display
+  #on_tts_stream_start:
+  #  - lambda: id(voice_assistant_phase) = ${voice_assist_replying_phase_id};
+  #  - script.execute: draw_display
+  #on_tts_stream_end:
+  #  - if:
+  #      condition:
+  #        switch.is_off: mute
+  #      then:
+  #        - lambda: id(voice_assistant_phase) = ${voice_assist_idle_phase_id};
+  #      else:
+  #        - lambda: id(voice_assistant_phase) = ${voice_assist_muted_phase_id};
+  #  - script.execute: draw_display
   on_end:
     - wait_until:
         not:
