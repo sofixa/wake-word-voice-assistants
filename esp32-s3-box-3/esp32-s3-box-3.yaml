@@ -78,7 +78,7 @@ external_components:
     components: [file]
     refresh: 0s
   - source: github://sofixa/esphome_audio@esp32-s3-box-3-v3
-    components: ["esphome/components/adf_pipeline", "esphome/components/i2s_audio"]
+    components: ["adf_pipeline", "i2s_audio"]
     refresh: 0s
 
 
