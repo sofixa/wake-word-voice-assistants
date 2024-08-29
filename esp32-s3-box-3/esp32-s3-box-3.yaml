@@ -146,8 +146,12 @@ i2s_audio:
   i2s_mclk_pin: GPIO2
 
 microphone:
-  - platform: esp_adf
+  - platform: i2s_audio
     id: box_mic
+    adc_type: external
+    pdm: false
+    i2s_din_pin: GPIO16
+    bits_per_sample: 16bit
 
 media_player:
   - platform: i2s_audio
