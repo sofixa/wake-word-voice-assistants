@@ -145,8 +145,13 @@ microphone:
     id: box_mic
 
 media_player:
-  - platform: esp_adf
+  - platform: i2s_audio
     id: box_speaker
+    dac_type: external
+    i2s_dout_pin: GPIO15
+    mute_pin:
+      number: GPIO46
+      inverted: true
 
 micro_wake_word:
   models:
