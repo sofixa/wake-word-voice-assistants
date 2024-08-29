@@ -140,6 +140,11 @@ light:
 esp_adf:
   board: esp32s3box3
 
+i2s_audio:
+  i2s_lrclk_pin: GPIO47
+  i2s_bclk_pin: GPIO17
+  i2s_mclk_pin: GPIO2
+
 microphone:
   - platform: esp_adf
     id: box_mic
