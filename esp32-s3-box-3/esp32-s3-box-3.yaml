@@ -144,7 +144,7 @@ microphone:
   - platform: esp_adf
     id: box_mic
 
-speaker:
+media_player:
   - platform: esp_adf
     id: box_speaker
 
