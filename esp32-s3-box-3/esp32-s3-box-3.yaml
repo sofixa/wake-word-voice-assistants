@@ -325,7 +325,7 @@ voice_assistant:
           - delay: 1s
     - wait_until:
         not:
-          speaker.is_playing:
+          adf_media_player.is_playing:
     - switch.turn_off: timer_ringing
     - script.execute: start_voice_assistant
     - script.execute: draw_display
